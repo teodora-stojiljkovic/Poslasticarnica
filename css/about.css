@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:400,700';
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /*da kkorisnik ne moze da selektuje sadrzaj prelaskom kursora*/
+    transition: .2s linear; /* tranzicija 0.2 sekunde na celom sajtu*/
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: rgb(255, 126, 147)  ;
+    --color2: #ffffff ;
+}
+
+
+nav{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.nav-bar {
+    width: 95%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    
+    padding: 12px 20px;
+    z-index: 1000;
+    
+}
+
+.logo img {
+    margin-left: 60px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+   
+    
+}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {width: 100%;}
+
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+
+.home{
+    background-image: url(../slike/27cakerex-plzm-threeByTwoMediumAt2X.jpg);
+    min-height: 300px;
+
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  
+
+}
+
+.home  h1{
+    padding-top: 120px;
+    font-family: 'Monnserat', sans-serif;    
+    letter-spacing:3px;                                          
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    text-align: center;
+
+}
+
+.home2{
+    min-height: 500px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+
+.home2 .kontejner{
+    padding-top: 60px;
+    margin: auto;
+    text-align: left;
+    
+   
+    width: 80%;
+    
+}
+
+.home2 .kontejner .box{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
+
+.home2 .kontejner .box .tekst{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    align-items: center;
+}
+
+.home2 .kontejner .box .tekst h1{
+    color: rgb(255, 126, 147);
+
+    font-family: 'Monnserat', sans-serif;
+    text-transform: uppercase;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.home2 .kontejner .box .tekst p{
+    font-family: serif;
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 60%;
+    color: rgb(255, 126, 147);
+
+}
+
+
+.home2 .kontejner .box .slika{
+    display: flex;
+    width: 40%;
+   
+}
+
+.home2 .kontejner .box img{
+    max-width: 100%;
+    height: auto;
+   
+}
+
+
+
+
+/***************************************************/
+
+
+
+
+.footer{
+    padding-top: 40px;
+    background-color: rgb(255, 126, 147);
+    text-align: center;
+}
+
+.footer .share{
+    padding: 10px 0;
+}
+
+.footer .share a{
+   
+    font-size: 30px;
+    color: rgb(255, 255, 255) ;
+    margin: 10px;
+
+}
+
+.footer .share a:hover{
+    
+    color: #ffdd00;
+    transition: linear 0.1s;
+}
+
+
+.footer .credit{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    padding:1.5rem;
+    color: rgb(255, 255, 255)
+}
+
+
+
+
+
+
+@media(max-width: 610px){
+
+    
+    .home2 .kontejner .box .tekst{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+
+    .home2 .kontejner .box .slika{
+        display: flex;
+        width: 100%;
+       
+    }
+    
+
+
+    .home2 .kontejner .box{
+        
+        flex-direction: column;
+    }
+    
+    .container{
+        display: flex;
+        
+    }
+
+    .home{
+        min-height: 150px;
+        
+    }
+    
+    .home h1{
+        padding-top: 120px;
+        font-size: 60px;
+    }
+      
+    .logo img {
+        margin-left: 0px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
